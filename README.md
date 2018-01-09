@@ -1,5 +1,5 @@
 # qnavigate
-QGIS plugin for navigation
+## QGIS plugin for navigation
 
 Draft specs:
 * choose polar for your boat
