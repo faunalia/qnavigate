@@ -15,6 +15,9 @@ e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
 * define start time
 * download GRIB files (bounding box taken from points above; start date taken from above) [see http://www.zygrib.org/]
 ![Grib downolad popup](img/zygrib_download.png?raw=true "ZyGrib downolad popup")
+  * how to download from ECMWF: https://software.ecmwf.int/wiki/display/WEBAPI/Accessing+ECMWF+data+servers+in+batch
+  * how to download from NASA: https://disc.gsfc.nasa.gov/information/howto/5761bc6a5ad5a18811681bae
+  * proof of concept plugin: https://github.com/OpenDataHack/qgis-ecmwf-catalogue-plugin
   * **problem**: EPSG code / extent / bands possibly misinterpreted
 * configure an appropriate visualization (wind speed and direction, wave height and direction)
   * **problem**: find which bands convey the necessary info
