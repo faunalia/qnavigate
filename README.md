@@ -18,7 +18,7 @@ e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
   * how to download from ECMWF: https://software.ecmwf.int/wiki/display/WEBAPI/Accessing+ECMWF+data+servers+in+batch
   * how to download from NASA: https://disc.gsfc.nasa.gov/information/howto/5761bc6a5ad5a18811681bae
   * proof of concept plugin: https://github.com/OpenDataHack/qgis-ecmwf-catalogue-plugin
-  * **problem**: EPSG code / extent / bands possibly misinterpreted
+  * **problem**: EPSG code / extent / bands possibly misinterpreted; see https://issues.qgis.org/issues/17219 and http://www.zygrib.org/forum/viewtopic.php?f=3&t=1069&p=3195#p3195
 * configure an appropriate visualization (wind speed and direction, wave height and direction)
   * **problem**: find which bands convey the necessary info
   * **problem**: GRIB is loaded as a raster; not trivial to add wind direction and speed arrows, possibly a raster to vector conversion is necessary
