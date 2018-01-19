@@ -15,6 +15,7 @@ e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
 * define start time
 * download GRIB files (bounding box taken from points above; start date taken from above) [see http://www.zygrib.org/]
 ![Grib downolad popup](img/zygrib_download.png?raw=true "ZyGrib downolad popup")
+  * possibly extract the bands of interest: ``gdal_translate -b 34 -b 35 -b 36 ECMWF0100_2017030100_000.grb wind.tif``
   * how to download from ECMWF: https://software.ecmwf.int/wiki/display/WEBAPI/Accessing+ECMWF+data+servers+in+batch
   * how to download from NASA: https://disc.gsfc.nasa.gov/information/howto/5761bc6a5ad5a18811681bae
   * proof of concept plugin: https://github.com/OpenDataHack/qgis-ecmwf-catalogue-plugin
