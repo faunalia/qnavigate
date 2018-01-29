@@ -29,8 +29,11 @@ e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
   * **problem**: GRIB is loaded as a raster; not trivial to add wind direction and speed arrows, possibly a raster to vector conversion is necessary
 
 ### Work package #4: Routing
-* calculate optimal route [see https://www.sailgrib.com/] and add as temporary layer
-  * avoid land masses
+* calculate optimal route
+  * a description of possible approaches here: http://web.abo.fi/fak/tkf/at/ose/doc/Pres_15112013/Mikael%20Nyberg.pdf and https://www.researchgate.net/publication/280105634_Routing_and_course_control_of_an_autonomous_sailboat
+  * examples: [see https://www.sailgrib.com/], e.g. https://www.sailgrib.com/wp-content/uploads/2014/12/device-2015-09-01-125050_framed_tiny.jpg
+* add the result as a temporary layer
+  * avoid land masses from WP#1
 
 ### Work package #5: Navigation
 * communicate with autopilot to set the helm
