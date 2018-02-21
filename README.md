@@ -18,7 +18,7 @@ e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
 * define start and end points, plus optional intermediate points
 * define start time
 
-### Work package #3: Load meteo data
+### Work package #3: Load meteo data (QMeteo)
 * download GRIB files (bounding box taken from points above; start date taken from above) [see http://www.zygrib.org/]
 ![Grib downolad popup](img/zygrib_download.png?raw=true "ZyGrib downolad popup")
   * possibly extract the bands of interest: ``gdal_translate -b 34 -b 35 -b 36 ECMWF0100_2017030100_000.grb wind.tif``
@@ -29,6 +29,9 @@ e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
 * configure an appropriate visualization (wind speed and direction, wave height and direction)
   * **problem**: find which bands convey the necessary info
   * **problem**: GRIB is loaded as a raster; not trivial to add wind direction and speed arrows, possibly a raster to vector conversion is necessary
+  **QMeteo**
+  * specific menu with a preloaded dataset of the world to allow users to make a direct bbox of the place of interest
+  * extracting bands of meteorological interest and use styles to make weather forecasts (using also the autorefreshing system)
 
 ### Work package #4: Dynamic routing
 * calculate optimal route
