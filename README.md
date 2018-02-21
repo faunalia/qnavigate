@@ -1,6 +1,8 @@
 # qnavigate
 ## QGIS plugin for meteo, dynamic routing, and navigation
 
+Each work package is independent of others, and some are of very general interest.
+
 ### Work package #1: Load marine charts
 * load marine charts [check free ones from OpenCPN: https://opencpn.org/OpenCPN/info/chartsource.html 
 e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
