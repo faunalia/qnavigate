@@ -20,7 +20,13 @@ e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
 
 ### Work package #3: QMeteo: load meteo data
 * download GRIB files (bounding box taken from points above; start date taken from above) [see http://www.zygrib.org/]
-![Grib downolad popup](img/zygrib_download.png?raw=true "ZyGrib downolad popup")
+![Grib downolad popup](img/zygrib_download.png?raw=true "ZyGrib downolad popup"); notes here: https://nomads.ncdc.noaa.gov/data/gfsanl/IMPORTANT_NOTE ; http used by ZyGrib: `data/maps/gshhs/README.gshhs.rangs:http://www.ngdc.noaa.gov/mgg/fliers/93mgg01.html
+src/IacReader.h:http://weather.noaa.gov/pub/data/raw/as/asxx21.egrr..txt
+src/IacReader.h:http://weather.noaa.gov/pub/data/raw/fs/fsxx21.egrr..txt
+src/GribRecord.cpp:		// data: http://nomads.ncdc.noaa.gov/data/gfsanl/
+src/GribRecord.cpp.orig:		// data: http://nomads.ncdc.noaa.gov/data/gfsanl/`
+
+
   * possibly extract the bands of interest: ``gdal_translate -b 34 -b 35 -b 36 ECMWF0100_2017030100_000.grb wind.tif``
   * how to download from ECMWF: https://software.ecmwf.int/wiki/display/WEBAPI/Accessing+ECMWF+data+servers+in+batch
   * how to download from NASA: https://disc.gsfc.nasa.gov/information/howto/5761bc6a5ad5a18811681bae
