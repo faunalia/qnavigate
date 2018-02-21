@@ -3,7 +3,7 @@
 
 Each work package is independent of others, and some (in particular `QMeteo` and `Dynamic routing`) are of very general interest.
 
-### Work package #1: Qsea: load and style marine charts
+### Work package #1: QSea: load and style marine charts
 * load marine charts [check free ones from OpenCPN: https://opencpn.org/OpenCPN/info/chartsource.html 
 e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
 * create styles for them, see international guidelines: https://www.iho.int/iho_pubs/standard/S-52/PresLib_e3.4_Introduction.pdf and OpenCPN code here: https://github.com/OpenCPN/OpenCPN/blob/master/src/s52cnsy.cpp implementing "conditional symbology"; the code it tightly dependent on the OpenCPN internal data structures, so may be difficult to abstract directly. The basic idea is to walk the table of Features found in the S57 file(s), and draw each item in succession.  The S52 spec defines the order of rendering, so that the correct Features appear "on top".  There are also display categories, grouping Feature types together to control display content and complexity. etc...
