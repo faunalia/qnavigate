@@ -1,15 +1,15 @@
 # qnavigate
 ## QGIS plugin for meteo, dynamic routing, and navigation
 
-Each work package is independent of others, and some are of very general interest.
+Each work package is independent of others, and some (in particular `QMeteo` and `Dynamic routing`) are of very general interest.
 
-### Work package #1: Load marine charts
+### Work package #1: Qsea: load and style marine charts
 * load marine charts [check free ones from OpenCPN: https://opencpn.org/OpenCPN/info/chartsource.html 
 e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
 * create styles for them, see international guidelines: https://www.iho.int/iho_pubs/standard/S-52/PresLib_e3.4_Introduction.pdf and OpenCPN code here: https://github.com/OpenCPN/OpenCPN/blob/master/src/s52cnsy.cpp implementing "conditional symbology"; the code it tightly dependent on the OpenCPN internal data structures, so may be difficult to abstract directly. The basic idea is to walk the table of Features found in the S57 file(s), and draw each item in succession.  The S52 spec defines the order of rendering, so that the correct Features appear "on top".  There are also display categories, grouping Feature types together to control display content and complexity. etc...
   * **problem**: loading S57 seems to slow down QGIS horribly
 
-### Work package #2: Load configurations
+### Work package #2: Load navigation parameters
 * choose polar for your boat; see sample in this repo
 * define optional variables
   * % reduction for night navigation
@@ -18,7 +18,7 @@ e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
 * define start and end points, plus optional intermediate points
 * define start time
 
-### Work package #3: Load meteo data (QMeteo)
+### Work package #3: QMeteo: load meteo data
 * download GRIB files (bounding box taken from points above; start date taken from above) [see http://www.zygrib.org/]
 ![Grib downolad popup](img/zygrib_download.png?raw=true "ZyGrib downolad popup")
   * possibly extract the bands of interest: ``gdal_translate -b 34 -b 35 -b 36 ECMWF0100_2017030100_000.grb wind.tif``
