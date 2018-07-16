@@ -47,7 +47,8 @@ e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
   * specific menu with a preloaded dataset of the world to allow users to make a direct bbox of the place of interest
   * extracting bands of meteorological interest and use styles to make weather forecasts (using also the autorefreshing system)
 * also tides must be downloaded and taken into account for cosatal navigations; currents for open sea (thanks Jeorge)
-* **note**: some of these things are partially implemented in Crayfish https://www.lutraconsulting.co.uk/products/crayfish/; its porting to QGIS core would make things easier 
+* **note**: some of these things are partially implemented in Crayfish https://www.lutraconsulting.co.uk/products/crayfish/; its porting to QGIS core would make things easier
+* **note**: GRIB mesh support now in QGIS master: https://github.com/qgis/QGIS/pull/7409
 
 ### Work package #4: Dynamic routing
 * calculate optimal route
