@@ -42,7 +42,7 @@ e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
   * **problem**: EPSG code / extent / bands possibly misinterpreted; see https://issues.qgis.org/issues/17219 and http://www.zygrib.org/forum/viewtopic.php?f=3&t=1069&p=3195#p3195
 * configure an appropriate visualization (wind speed and direction, wave height and direction)
   * **problem**: find which bands convey the necessary info
-  * **problem**: GRIB is loaded as a raster; not trivial to add wind direction and speed arrows, possibly a raster to vector conversion is necessary
+  * **problem**: GRIB is loaded as a raster; not trivial to add wind direction and speed arrows, possibly a raster to vector conversion is necessary; **Note**: QGIS master currently should fully support GRIB, with arrows and description of bands
   **QMeteo**
   * specific menu with a preloaded dataset of the world to allow users to make a direct bbox of the place of interest
   * extracting bands of meteorological interest and use styles to make weather forecasts (using also the autorefreshing system)
