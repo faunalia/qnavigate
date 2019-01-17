@@ -29,11 +29,11 @@ e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
 * **note**: some of these things are partially implemented in Crayfish https://www.lutraconsulting.co.uk/products/crayfish/; its porting to QGIS core would make things easier
 
 #### download GRIB files
-http://openskiron.org/
-https://marine.meteoconsult.fr/cartes-meteo-marine/fichiers-grib.php
-see https://opengribs.org (previously http://www.zygrib.org/)
-![Grib downolad popup](img/zygrib_download.png?raw=true "ZyGrib downolad popup"); 
-notes here: https://nomads.ncdc.noaa.gov/data/gfsanl/IMPORTANT_NOTE ; http used by ZyGrib:
+* http://openskiron.org/
+* https://marine.meteoconsult.fr/cartes-meteo-marine/fichiers-grib.php
+* see https://opengribs.org (previously http://www.zygrib.org/)
+* ![Grib downolad popup](img/zygrib_download.png?raw=true "ZyGrib downolad popup"); 
+* notes here: https://nomads.ncdc.noaa.gov/data/gfsanl/IMPORTANT_NOTE ; http used by ZyGrib:
 
 `data/maps/gshhs/README.gshhs.rangs:http://www.ngdc.noaa.gov/mgg/fliers/93mgg01.html`
 
