@@ -22,8 +22,18 @@ e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
 * define start time
 
 ### Work package #3: QMeteo: load meteo data
-* download GRIB files (bounding box taken from points above; start date taken from above) [see http://www.zygrib.org/]
-![Grib downolad popup](img/zygrib_download.png?raw=true "ZyGrib downolad popup"); notes here: https://nomads.ncdc.noaa.gov/data/gfsanl/IMPORTANT_NOTE ; http used by ZyGrib:
+* GRIB is fully supported in QGIS 3
+* automatically download GRIB files (see below for details); bounding box taken from points above; start date taken from above 
+* configure an appropriate visualization (wind speed and direction, wave height and direction)
+* also tides must be downloaded and taken into account for cosatal navigations; currents for open sea (thanks Jeorge)
+* **note**: some of these things are partially implemented in Crayfish https://www.lutraconsulting.co.uk/products/crayfish/; its porting to QGIS core would make things easier
+
+#### download GRIB files
+http://openskiron.org/
+https://marine.meteoconsult.fr/cartes-meteo-marine/fichiers-grib.php
+see https://opengribs.org (previously http://www.zygrib.org/)
+![Grib downolad popup](img/zygrib_download.png?raw=true "ZyGrib downolad popup"); 
+notes here: https://nomads.ncdc.noaa.gov/data/gfsanl/IMPORTANT_NOTE ; http used by ZyGrib:
 
 `data/maps/gshhs/README.gshhs.rangs:http://www.ngdc.noaa.gov/mgg/fliers/93mgg01.html`
 
@@ -35,20 +45,9 @@ e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
 
 `src/GribRecord.cpp.orig:		// data: http://nomads.ncdc.noaa.gov/data/gfsanl/`
 
-  * possibly extract the bands of interest: ``gdal_translate -b 34 -b 35 -b 36 ECMWF0100_2017030100_000.grb wind.tif``
   * how to download from ECMWF: https://software.ecmwf.int/wiki/display/WEBAPI/Accessing+ECMWF+data+servers+in+batch
   * how to download from NASA: https://disc.gsfc.nasa.gov/information/howto/5761bc6a5ad5a18811681bae
   * proof of concept plugin: https://github.com/OpenDataHack/qgis-ecmwf-catalogue-plugin
-  * **problem**: EPSG code / extent / bands possibly misinterpreted; see https://issues.qgis.org/issues/17219 and http://www.zygrib.org/forum/viewtopic.php?f=3&t=1069&p=3195#p3195
-* configure an appropriate visualization (wind speed and direction, wave height and direction)
-  * **problem**: find which bands convey the necessary info
-  * **problem**: GRIB is loaded as a raster; not trivial to add wind direction and speed arrows, possibly a raster to vector conversion is necessary; **Note**: QGIS master currently should fully support GRIB, with arrows and description of bands
-  **QMeteo**
-  * specific menu with a preloaded dataset of the world to allow users to make a direct bbox of the place of interest
-  * extracting bands of meteorological interest and use styles to make weather forecasts (using also the autorefreshing system)
-* also tides must be downloaded and taken into account for cosatal navigations; currents for open sea (thanks Jeorge)
-* **note**: some of these things are partially implemented in Crayfish https://www.lutraconsulting.co.uk/products/crayfish/; its porting to QGIS core would make things easier
-* **note**: GRIB mesh support now in QGIS master: https://github.com/qgis/QGIS/pull/7409
 
 ### Work package #4: Dynamic routing
 * calculate optimal route
