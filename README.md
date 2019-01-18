@@ -24,7 +24,7 @@ e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
 ### Work package #3: QMeteo: load meteo data
 * GRIB is fully supported in QGIS 3
 * automatically download GRIB files (see below for details); bounding box taken from points above; start date taken from above 
-* configure an appropriate visualization (wind speed and direction, wave height and direction)
+* configure an appropriate visualization (wind speed and direction, wave height and direction); Processing Download File tool can be used for this
 * also tides must be downloaded and taken into account for cosatal navigations; currents for open sea (thanks Jeorge)
 * **note**: some of these things are partially implemented in Crayfish https://www.lutraconsulting.co.uk/products/crayfish/; its porting to QGIS core would make things easier
 
