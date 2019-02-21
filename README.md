@@ -5,6 +5,7 @@ Each work package is independent of others, and some (in particular `QMeteo` and
 The same approach can be useful in other context, e.g. paragliding (thanks Lene). Add more suggestions.
 
 ### Work package #1: QSea: load and style marine charts
+*on standby - new standards are coming, better wait*
 * load marine charts [check free ones from OpenCPN: https://opencpn.org/OpenCPN/info/chartsource.html 
 e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
 * create styles for them, see international guidelines: https://www.iho.int/iho_pubs/standard/S-52/PresLib_e3.4_Introduction.pdf and OpenCPN code here: https://github.com/OpenCPN/OpenCPN/blob/master/src/s52cnsy.cpp implementing "conditional symbology"; the code it tightly dependent on the OpenCPN internal data structures, so may be difficult to abstract directly. The basic idea is to walk the table of Features found in the S57 file(s), and draw each item in succession.  The S52 spec defines the order of rendering, so that the correct Features appear "on top".  There are also display categories, grouping Feature types together to control display content and complexity. etc...
@@ -22,13 +23,33 @@ e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
 * define start time
 
 ### Work package #3: QMeteo: load meteo data
-* GRIB is fully supported in QGIS 3
-* automatically download GRIB files (see below for details); bounding box taken from points above; start date taken from above 
-* configure an appropriate visualization (wind speed and direction, wave height and direction); Processing Download File tool can be used for this
-* also tides must be downloaded and taken into account for cosatal navigations; currents for open sea (thanks Jeorge)
-* **note**: some of these things are partially implemented in Crayfish https://www.lutraconsulting.co.uk/products/crayfish/; its porting to QGIS core would make things easier
 
-#### download GRIB files
+#### The idea
+
+Adding to QGIS the possibility of a direct download of meteo (GRIB) data.
+
+#### Engine
+There is already a free C++ downloader, from which we can take inspiration if not directly code:
+https://github.com/opengribs/XyGrib/blob/master/src/FileLoaderGRIB.cpp
+Still to be see whether to reuse the C++ code or rewrite it in Python.
+The end result should be a Processing alg.
+
+#### Dialog
+The tricky part is to port all the options present in 
+https://github.com/opengribs/XyGrib/blob/master/src/DialogLoadGRIB.cpp
+
+#### Display [lower priority]
+GRIBS are already well supported in QGIS. Some default styles should be applied to raster data (probably BYR color ramp). The standard style for wind indicators should bee developed and applied:
+
+
+#### Auto [lower priority]
+Add the option of a fresh download at every startup of a project.
+
+#### More issues related to QNavigate
+* bounding box taken from points above; start date taken from above 
+* also tides must be downloaded and taken into account for cosatal navigations; currents for open sea
+
+#### further info on GRIB files
 * http://openskiron.org/
 * https://marine.meteoconsult.fr/cartes-meteo-marine/fichiers-grib.php
 * see https://opengribs.org (previously http://www.zygrib.org/)
