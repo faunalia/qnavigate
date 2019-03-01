@@ -31,8 +31,7 @@ Adding to QGIS the possibility of a direct download of meteo (GRIB) data.
 See https://gitlab.com/faunalia/gribdownloader/
 
 #### Display [lower priority]
-GRIBS are already well supported in QGIS. Some default styles should be applied to raster data (probably BYR color ramp). The standard style for wind indicators should bee developed and applied, e.g.:
-http://ww2010.atmos.uiuc.edu/(Gh)/guides/maps/sfcobs/wnd.rxml
+GRIBS are already well supported in QGIS. Some default styles should be applied to raster data (probably BYR color ramp). The standard style for wind indicators should bee developed and applied, see: https://issues.qgis.org/issues/21440
 
 #### Auto [lower priority]
 Add the option of a fresh download at every startup of a project.
