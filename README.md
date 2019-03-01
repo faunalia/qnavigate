@@ -28,15 +28,7 @@ e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
 
 Adding to QGIS the possibility of a direct download of meteo (GRIB) data.
 
-#### Engine
-There is already a free C++ downloader, from which we can take inspiration if not directly code:
-https://github.com/opengribs/XyGrib/blob/master/src/FileLoaderGRIB.cpp
-Still to be see whether to reuse the C++ code or rewrite it in Python.
-The end result should be a Processing alg.
-
-#### Dialog
-The tricky part is to port all the options present in 
-https://github.com/opengribs/XyGrib/blob/master/src/DialogLoadGRIB.cpp
+See https://gitlab.com/faunalia/gribdownloader/
 
 #### Display [lower priority]
 GRIBS are already well supported in QGIS. Some default styles should be applied to raster data (probably BYR color ramp). The standard style for wind indicators should bee developed and applied, e.g.:
@@ -54,21 +46,10 @@ Add the option of a fresh download at every startup of a project.
 * https://marine.meteoconsult.fr/cartes-meteo-marine/fichiers-grib.php
 * see https://opengribs.org (previously http://www.zygrib.org/)
 * ![Grib downolad popup](img/zygrib_download.png?raw=true "ZyGrib downolad popup"); 
-* notes here: https://nomads.ncdc.noaa.gov/data/gfsanl/IMPORTANT_NOTE ; http used by ZyGrib:
-
-`data/maps/gshhs/README.gshhs.rangs:http://www.ngdc.noaa.gov/mgg/fliers/93mgg01.html`
-
-`src/IacReader.h:http://weather.noaa.gov/pub/data/raw/as/asxx21.egrr..txt`
-
-`src/IacReader.h:http://weather.noaa.gov/pub/data/raw/fs/fsxx21.egrr..txt`
-
-`src/GribRecord.cpp:		// data: http://nomads.ncdc.noaa.gov/data/gfsanl/`
-
-`src/GribRecord.cpp.orig:		// data: http://nomads.ncdc.noaa.gov/data/gfsanl/`
-
-  * how to download from ECMWF: https://software.ecmwf.int/wiki/display/WEBAPI/Accessing+ECMWF+data+servers+in+batch
-  * how to download from NASA: https://disc.gsfc.nasa.gov/information/howto/5761bc6a5ad5a18811681bae
-  * proof of concept plugin: https://github.com/OpenDataHack/qgis-ecmwf-catalogue-plugin
+* notes here: https://nomads.ncdc.noaa.gov/data/gfsanl/IMPORTANT_NOTE 
+* how to download from ECMWF: https://software.ecmwf.int/wiki/display/WEBAPI/Accessing+ECMWF+data+servers+in+batch
+* how to download from NASA: https://disc.gsfc.nasa.gov/information/howto/5761bc6a5ad5a18811681bae
+* proof of concept plugin: https://github.com/OpenDataHack/qgis-ecmwf-catalogue-plugin
 
 ### Work package #4: Dynamic routing
 * calculate optimal route
