@@ -24,11 +24,7 @@ e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
 
 ### Work package #3: QMeteo: load meteo data
 
-#### The idea
-
-Adding to QGIS the possibility of a direct download of meteo (GRIB) data.
-
-See https://gitlab.com/faunalia/gribdownloader/
+*mostly done*, see https://gitlab.com/faunalia/gribdownloader/
 
 #### Display [lower priority]
 GRIBS are already well supported in QGIS. Some default styles should be applied to raster data (probably BYR color ramp). The standard style for wind indicators should bee developed and applied, see: https://issues.qgis.org/issues/21440
