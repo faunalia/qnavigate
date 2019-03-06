@@ -12,7 +12,7 @@ e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
   * **problem**: loading S57 seems to slow down QGIS horribly; possibly patches to GDAL from OpenCPN will solve this; merging back this work will require non trivial work; an alternative would be to convert in a GIS friendly format (GPKG?) at the beginning of the process
 
 ### Work package #2: Load navigation parameters
-* choose polar for your boat; see sample in this repo (more info http://www.ockam.com/2013/06/03/what-are-polars/)
+* choose polar for your boat; see [sample](./.github/sunodyssey36i.pol) in this repo (more info at http://www.ockam.com/2013/06/03/what-are-polars/)
 * define optional variables
   * % reduction for night navigation
   * % reduction for strong winds
@@ -44,7 +44,6 @@ Add the option of a fresh download at every startup of a project.
 * http://openskiron.org/
 * https://marine.meteoconsult.fr/cartes-meteo-marine/fichiers-grib.php
 * see https://opengribs.org (previously http://www.zygrib.org/)
-* ![Grib downolad popup](img/zygrib_download.png?raw=true "ZyGrib downolad popup"); 
 * notes here: https://nomads.ncdc.noaa.gov/data/gfsanl/IMPORTANT_NOTE 
 * how to download from ECMWF: https://software.ecmwf.int/wiki/display/WEBAPI/Accessing+ECMWF+data+servers+in+batch
 * how to download from NASA: https://disc.gsfc.nasa.gov/information/howto/5761bc6a5ad5a18811681bae
