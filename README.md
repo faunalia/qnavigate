@@ -2,7 +2,8 @@
 ## QGIS plugin for meteo, dynamic routing, and navigation
 
 Each work package is independent of others, and some (in particular `QMeteo` and `Dynamic routing`) are of very general interest.
-The same approach can be useful in other context, e.g. paragliding (thanks Lene). Add more suggestions.
+The same approach can be useful in other context.
+The following packages are in logical order, not sorted by priority. Currently top priority is Paackage #4.
 
 ### Work package #1: QSea: load and style marine charts
 *on standby - new standards are coming, better wait*
@@ -30,7 +31,7 @@ e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
 * bounding box taken from points above; start date taken from above 
 * also tides must be downloaded and taken into account for cosatal navigations; currents for open sea
 
-#### further info on GRIB files
+#### Further info on GRIB files
 * http://openskiron.org/
 * https://marine.meteoconsult.fr/cartes-meteo-marine/fichiers-grib.php
 * see https://opengribs.org (previously http://www.zygrib.org/)
