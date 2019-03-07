@@ -3,7 +3,10 @@
 
 Each work package is independent of others, and some (in particular `QMeteo` and `Dynamic routing`) are of very general interest.
 The same approach can be useful in other context.
-The following packages are in logical order, not sorted by priority. Currently top priority is Paackage #4.
+
+The following packages are in logical order, not sorted by priority.
+
+Currently, top priority is Package #4.
 
 ### Work package #1: QSea: load and style marine charts
 *on standby - new standards are coming, better wait*
