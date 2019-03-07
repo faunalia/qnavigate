@@ -24,13 +24,7 @@ e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
 
 ### Work package #3: QMeteo: load meteo data
 
-*mostly done*, see https://gitlab.com/faunalia/gribdownloader/
-
-#### Display [lower priority]
-GRIBS are already well supported in QGIS. Some default styles should be applied to raster data (probably BYR color ramp). The standard style for wind indicators should bee developed and applied, see: https://issues.qgis.org/issues/21440
-
-#### Auto [lower priority]
-Add the option of a fresh download at every startup of a project.
+*done*, see https://gitlab.com/faunalia/gribdownloader/ published in http://plugins.qgis.org/plugins/gribdownloader/
 
 #### More issues related to QNavigate
 * bounding box taken from points above; start date taken from above 
