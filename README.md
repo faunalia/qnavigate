@@ -55,6 +55,7 @@ roadmap algorithms will work better as they don't need explicit edge-to-node con
 ### Work package #5: Navigation
 * communicate with autopilot to set the helm
 * protocol NMEA2000 https://www.nmea.org/content/nmea_standards/nmea_2000_ed3_10.asp
+* see also http://www.sailoog.com/openplotter
 
 ### Work package #6: Porting to tablet
 * QtQuick https://doc.qt.io/qt-5/qtquick-index.html
