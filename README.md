@@ -16,7 +16,7 @@ e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
   * **problem**: loading S57 seems to slow down QGIS horribly; possibly patches to GDAL from OpenCPN will solve this; merging back this work will require non trivial work; an alternative would be to convert in a GIS friendly format (GPKG?) at the beginning of the process
 
 ### Work package #2: Load navigation parameters
-* choose polar for your boat; see [sample](./sunodyssey36i.pol) in this repo (more info at http://www.ockam.com/2013/06/03/what-are-polars/)
+* choose polar for your boat; see [sample](./sunodyssey36i.pol) in this repo (more info at http://www.ockam.com/2013/06/03/what-are-polars/ and http://jieter.github.io/orc-data/site/)
 * define optional variables
   * % reduction for night navigation
   * % reduction for strong winds
