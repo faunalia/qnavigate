@@ -44,6 +44,7 @@ e.g. http://www.vnf.fr/ecdis/ecdis.html ; S57 is supported by GDAL]
 * proof of concept plugin: https://github.com/OpenDataHack/qgis-ecmwf-catalogue-plugin
 
 ### Work package #4: Dynamic routing
+**NEW**: https://github.com/enricofer/wind_forecast_routing
 * calculate optimal route
   * a description of possible approaches here: http://web.abo.fi/fak/tkf/at/ose/doc/Pres_15112013/Mikael%20Nyberg.pdf and https://www.researchgate.net/publication/280105634_Routing_and_course_control_of_an_autonomous_sailboat; on global planning level should be possible to use existing algorithms like A* or Dijkstra. But as in the sea there are no "roads" and we can move in any direction it is necessary to prepare data (nodes and edges) for these algorithms. Probabilistic
 roadmap algorithms will work better as they don't need explicit edge-to-node connection. This would probably have to be implemented from scratch as a new QGIS alg. Also for the local planning stage seems a custom algorithm need to be developed
