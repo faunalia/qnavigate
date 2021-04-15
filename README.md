@@ -60,4 +60,4 @@ roadmap algorithms will work better as they don't need explicit edge-to-node con
 
 ### Work package #6: Porting to tablet
 * QtQuick https://doc.qt.io/qt-5/qtquick-index.html
-* Qfield http://www.qfield.org/
+* Qfield http://www.qfield.org/ [big problem: no Python support]
