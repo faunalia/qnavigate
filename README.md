@@ -8,7 +8,7 @@ The following packages are in logical order, not sorted by priority.
 
 ### Work package #1: QSea: load and style marine charts
 *on standby - new standards are coming, better wait*
-* load marine charts [check free ones from OpenCPN: https://opencpn.org/OpenCPN/info/chartsource.html; S57 and SBS/KAP are supported by GDAL]
+* load marine charts [check free ones from OpenCPN: https://opencpn.org/OpenCPN/info/chartsource.html; S57 and SBS/KAP are supported by GDAL, thus by QGIS]
 * create styles for them, see international guidelines: https://www.iho.int/iho_pubs/standard/S-52/PresLib_e3.4_Introduction.pdf and OpenCPN code here: https://github.com/OpenCPN/OpenCPN/blob/master/src/s52cnsy.cpp implementing "conditional symbology"; the code it tightly dependent on the OpenCPN internal data structures, so may be difficult to abstract directly. The basic idea is to walk the table of Features found in the S57 file(s), and draw each item in succession.  The S52 spec defines the order of rendering, so that the correct Features appear "on top".  There are also display categories, grouping Feature types together to control display content and complexity. etc...
   * **problem**: loading S57 seems to slow down QGIS horribly; possibly patches to GDAL from OpenCPN will solve this; merging back this work will require non trivial work; an alternative would be to convert in a GIS friendly format (GPKG?) at the beginning of the process
   * a good alternative (even if outdated, it should be easy to adapt: https://www.sigterritoires.fr/index.php/en/displaying-marine-charts-with-s57-qgis/
